@@ -165,3 +165,9 @@ artifactoryPublish.mustRunAfter('spawnSnapshotBasicArchives')
 artifactoryPublish.mustRunAfter('spawnDemoBasicArchives')
 artifactoryPublish.mustRunAfter('connectedSnapshotBasicDebugAndroidTest')
 artifactoryPublish.mustRunAfter('connectedDemoBasicDebugAndroidTest')
+
+apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = "0.8.2"
+}
