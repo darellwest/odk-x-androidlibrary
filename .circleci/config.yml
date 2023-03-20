@@ -33,7 +33,7 @@ jobs:
           command: ./gradlew test
       - run:
           name: deploy to github packages
-          command: mvn deploy
+          command: mvn clean deploy
 
 workflows:
   build_and_test:
