@@ -21,9 +21,7 @@ jobs:
       - run:
           name: build project
           command: ./gradlew clean assemble
-      - run:
-          name: run tests
-          command: ./gradlew test
+
   test-android-lib:
     working_directory: ~/build-android-lib
     docker:
@@ -33,6 +31,9 @@ jobs:
       - run:
           name: Run unit tests
           command: ./gradlew test
+      - run:
+          name: deploy to github packages
+          command: mvn deploy
 
 workflows:
   build_and_test:
